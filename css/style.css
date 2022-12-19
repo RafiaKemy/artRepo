@@ -1,0 +1,334 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+#banner{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-content .navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0px 100px;
+    border-bottom: 1px dashed #dedede;
+}
+.navbar .nav-item{
+    padding: 0px 5px;
+}
+.navbar-brand,
+.nav-link{
+    color: #dfdfdf;
+}
+.nav-link.active{
+    color: #254499;
+}
+.fa-user{
+    font-size: 15px;
+    border: 1px solid #4e4e4d;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+/* ==============gallery-slider=========== */
+.gallery-slider{
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider-images{
+    display: flex;
+    width: 100%;
+}
+.slider{
+    display: flex;
+    min-width: 100%;
+}
+.slider-images img{
+    height: 100vh;
+    width: 100%;
+}
+#prevBtn, #nextBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 36px;
+    color: #141111;
+    opacity: 0.5;
+    background-color: transparent;
+    border: none;
+}
+#prevBtn{
+    left: 5%;
+}
+#nextBtn{
+    right: 5%;
+}
+
+/*============ most-viewed images======== */
+.most-viewed{
+    padding: 60px 80px;
+}
+.viewed-images .image{
+    max-height: 250px;
+    width: 300px;
+}
+.viewed-images .image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* ==========contact page start ========*/
+.contact-page{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+.get-in-touch{
+    padding: 60px;
+}
+.contact-info{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 50px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4),
+                0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contact-title{
+    color: #fff;
+}
+.contact{
+    padding: 40px 50px;
+}
+.contact-form{
+    padding: 0px 20px;
+}
+
+.form-control{
+    max-width: 350px;
+}
+
+
+/* ==========admin-login page start ========*/
+.admin-login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.admin-login input{
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+.admin-login button{
+    width: 150px;
+    padding: 10px;
+    background-color: aqua;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+/* ==========admin-dashboard page start ========*/
+.admin-dashboard{
+    width: 100%;
+    height: 100vh;
+}
+
+.side-bar{
+    min-height: 100vh;
+    border-right:  1px solid #dedede;
+}
+.side-navbar{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-btn li{
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+}
+.category-btn li.active{
+    color: #777474;
+}
+
+.category-btn li.active::before{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-top: 2px solid #777474;
+    border-right: 2px solid #777474;
+    transform: rotate(45deg);
+    left: -20px;
+    top: 8px;
+}
+
+.admin-gallery{
+    padding: 50px 20px;
+}
+
+.gallery-image{
+    display: flex;
+    flex: 0 0 24%;
+    width: 24%;
+    height: 150px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid #777474;
+    margin: 8px 5px;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-image .image img{
+    width: 100%;
+    padding: 5px 0px;
+}
+.delete-btn, .edit-btn{
+    position: absolute;
+    bottom: 8px;
+    width: 30%;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+.delete-btn{
+    right: 0;
+}
+
+.fall{
+    /* transform: translateZ(20px) rotate(20deg); */
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+/*========== all-images page start =========*/
+.all-images{
+    padding: 50px 100px;
+}
+.filter-btns{
+    width: 100%;
+    height: 80px;
+}
+#filter-img{
+    width: 200px;
+    padding: 5px 10px;
+}
+#filter-img option{
+    font-size: 18px;
+}
+
+.all-images .single-image{
+    position: relative;
+    max-width: 23%;
+    max-height: 25vh;
+    display: flex;
+    margin: 10px 8px;
+    padding: 0;
+    border: 1px solid #b2b2b2;
+}
+.single-image .image{
+    width: 280px;
+    overflow: hidden;
+}
+.single-image img{
+    width: 100%;
+}
+.single-image .overlay{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: overlayAnimate 0.5s ease-in-out;
+}
+@keyframes overlayAnimate{
+    0%{
+        bottom: -40px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+.single-image .overlay .fas{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 40px;
+}
+.single-image:hover .overlay{
+    display: flex;
+}
+
+
+/*==========lightbox style here============*/
+.lightbox{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.show{
+    display: flex;
+}
+
+.lightbox.hide{
+    display: none;
+}
+.lightbox .close-lightbox{
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+    color: #4c4e55;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.lightbox .fa{
+    font-size: 20px;
+}
+.lightbox img{
+    max-width: 80%;
+    max-height: 90%;
+    display: block;
+}
